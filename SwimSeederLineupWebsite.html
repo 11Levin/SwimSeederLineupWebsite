@@ -1,0 +1,377 @@
+<html>
+
+<head>
+
+<title>
+
+Swim Lineup Generator
+
+</title>
+
+<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+</head>
+
+<style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+    input[type=number], select {
+      width: 100%;
+      padding: 12px 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4c4faf;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    p {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+
+<body>
+
+    <form onsubmit="return false">
+      <table>
+              <form onsubmit="return false">
+                  <tr>
+                      <td>
+                          <label for="name">
+                          Names:
+                          </label>
+                      </td>
+                      <td><input type="text" id="HS1name" name="HS1name" value="Home Swimer 1 Name"/>
+                      </td>
+                     </td>
+                     <td><input type="text" id="HS2name" name="HS2name" value="Home Swimer 2 Name"/>
+                     </td>
+                   </td>
+                   <td><input type="text" id="HS3name" name="HS3name" value="Home Swimer 3 Name"/>
+                   </td>
+                 </td>
+                 <td><input type="text" id="HS4name" name="HS4name" value="Home Swimer 4 Name"/>
+                 </td>
+               </td>
+               <td><input type="text" id="HS5name" name="HS5name" value="Home Swimer 5 Name"/>
+               </td>
+             </td>
+             <td><input type="text" id="AS1name" name="AS1name" value="Away Swimer 1 Name"/>
+             </td>
+           </td>
+           <td><input type="text" id="AS2name" name="AS2name" value="Away Swimer 2 Name"/>
+           </td>
+         </td>
+         <td><input type="text" id="AS3name" name="AS3name" value="Away Swimer 3 Name"/>
+         </td>
+                  </tr>
+                  <tr>
+                      <td><label for="FreeTime">
+                              Free time:
+                          </label>
+                        </td>
+                        <td><input type="number" id="HS1ft" name="HS1ft" value="10"/>
+                        </td>
+                       </td>
+                       <td><input type="number" id="HS2ft" name="HS2ft" value="10"/>
+                       </td>
+                     </td>
+                     <td><input type="number" id="HS3ft" name="HS3ft" value="10"/>
+                     </td>
+                   </td>
+                   <td><input type="number" id="HS4ft" name="HS4ft" value="10"/>
+                   </td>
+                 </td>
+                 <td><input type="number" id="HS5ft" name="HS5ft" value="10"/>
+                 </td>
+               </td>
+               <td><input type="number" id="AS1ft" name="AS1ft" value="10"/>
+               </td>
+             </td>
+             <td><input type="number" id="AS2ft" name="AS2ft" value="10"/>
+             </td>
+           </td>
+           <td><input type="number" id="AS3ft" name="AS3ft" value="10"/>
+           </td>
+                    </tr>
+                    <tr>
+                        <td><label for="BackTime">
+                                Back time:
+                            </label>
+                          </td>
+                          <td><input type="number" id="HS1backt" name="HS1backt" value="10"/>
+                          </td>
+                         </td>
+                         <td><input type="number" id="HS2backt" name="HS2backt" value="10"/>
+                         </td>
+                       </td>
+                       <td><input type="number" id="HS3backt" name="HS3backt" value="10"/>
+                       </td>
+                     </td>
+                     <td><input type="number" id="HS4backt" name="HS4backt" value="10"/>
+                     </td>
+                   </td>
+                   <td><input type="number" id="HS5backt" name="HS5backt" value="10"/>
+                   </td>
+                 </td>
+                 <td><input type="number" id="AS1backt" name="AS1backt" value="10"/>
+                 </td>
+               </td>
+               <td><input type="number" id="AS2backt" name="AS2backt" value="10"/>
+               </td>
+             </td>
+             <td><input type="number" id="AS3backt" name="AS3backt" value="10"/>
+             </td>
+                      </tr>
+                      <tr>
+                          <td><label for="BreastTime">
+                                  Breast time:
+                              </label>
+                            </td>
+                            <td><input type="number" id="HS1breastt" name="HS1breastt" value="10"/>
+                            </td>
+                           </td>
+                           <td><input type="number" id="HS2breastt" name="HS2breastt" value="10"/>
+                           </td>
+                         </td>
+                         <td><input type="number" id="HS3breastt" name="HS3breastt" value="10"/>
+                         </td>
+                       </td>
+                       <td><input type="number" id="HS4breastt" name="HS4breastt" value="10"/>
+                       </td>
+                     </td>
+                     <td><input type="number" id="HS5breastt" name="HS5breastt" value="10"/>
+                     </td>
+                   </td>
+                   <td><input type="number" id="AS1breastt" name="AS1breastt" value="10"/>
+                   </td>
+                 </td>
+                 <td><input type="number" id="AS2breastt" name="AS2breastt" value="10"/>
+                 </td>
+               </td>
+               <td><input type="number" id="AS3breastt" name="AS3breastt" value="10"/>
+               </td>
+                        </tr>
+                        <tr>
+                            <td><label for="FlyTime">
+                                    Fly time:
+                                </label>
+                              </td>
+                              <td><input type="number" id="HS1flyt" name="HS1flyt" value="10"/>
+                              </td>
+                             </td>
+                             <td><input type="number" id="HS2flyt" name="HS2flyt" value="10"/>
+                             </td>
+                           </td>
+                           <td><input type="number" id="HS3flyt" name="HS3flyt" value="10"/>
+                           </td>
+                         </td>
+                         <td><input type="number" id="HS4flyt" name="HS4flyt" value="10"/>
+                         </td>
+                       </td>
+                       <td><input type="number" id="HS5flyt" name="HS5flyt" value="10"/>
+                       </td>
+                     </td>
+                     <td><input type="number" id="AS1flyt" name="AS1flyt" value="10"/>
+                     </td>
+                   </td>
+                   <td><input type="number" id="AS2flyt" name="AS2flyt" value="10"/>
+                   </td>
+                 </td>
+                 <td><input type="number" id="AS3flyt" name="AS3flyt" value="10"/>
+                 </td>
+                          </tr>
+              </form>
+          </table>
+
+        <input pys-onClick="sub" type="submit" id="btn-form" value="submit">
+
+
+    </form>
+
+    <p>Output:</p>
+    <p id = 'output'></p>
+    <py-script>
+
+      import itertools
+      def haha(input):
+          bob = int(input)
+          bob += 1
+          return bob
+
+
+      counter = 0
+      def index(x):
+          x += 1
+          print("HI")
+          return x
+
+      def hello(x):
+          raw_string = r"{}".format(str(x))
+          return raw_string
+
+
+      def team(person, time, stroke):
+          for p in range(0,6):
+              if person[p][stroke] == time:
+                  return person[p][0]
+      def peopleCheck(sub):
+          counter = [0, 0, 0, 0, 0]
+          for l in sub:
+              counter[int(l[6])] += 1
+          for check in counter:
+              if check == 4:
+                  return False
+          return True
+
+      def Score(sub,score,OT):
+          freeList = [OT[0][2],OT[1][2],OT[2][2],sub[0][2],sub[1][2],sub[2][2]]
+          freeSList = [OT[0], OT[1], OT[2], sub[0], sub[1], sub[2]]
+          backList = [OT[0][3], OT[1][3], OT[2][3], sub[3][3], sub[4][3], sub[5][3]]
+          backSList = [OT[0], OT[1], OT[2], sub[3], sub[4], sub[5]]
+          breastList = [OT[0][4], OT[1][4], OT[2][4], sub[6][4], sub[7][4], sub[8][4]]
+          breastSList = [OT[0], OT[1], OT[2], sub[6], sub[7], sub[8]]
+          flyList = [OT[0][5], OT[1][5], OT[2][5], sub[9][5], sub[10][5], sub[11][5]]
+          flySList = [OT[0], OT[1], OT[2], sub[9], sub[10], sub[11]]
+          freeList.sort()
+          backList.sort()
+          breastList.sort()
+          flyList.sort()
+          allStroke = [freeList,backList,breastList,flyList]
+          allEvent = [freeSList,backSList,breastSList,flySList]
+          eCounter = 0
+          for List in allStroke:
+              for s in range(0, 3):
+                  for p in range(0, 6):
+                      if allEvent[eCounter][p][eCounter + 2] == List[s]:
+                          if allEvent[eCounter][p][0] == "P":
+                              score += (5 - s * 2)
+              eCounter += 1
+          return score
+
+      def tiePreventer(pvl):
+          breaker = 1
+          for swimmer in pvl:
+              breaker += 1
+              for stroke in range(2,6):
+                  swimmer[stroke] += 0.0001 * breaker
+
+      def reset(sub):
+          for remove in range(0,3):
+              sub.pop()
+
+      def fastest(list):
+          time = 0
+          for c in range(0,3):
+              time += list[c][2]
+          for c in range(3,6):
+              time += list[c][3]
+          for c in range(6,9):
+              time += list[c][4]
+          for c in range(9,12):
+              time += list[c][5]
+          return time
+
+
+
+      def lineupGen(HT1N,HT1FT,HT1BackT,HT1BreastT,HT1FlyT,HT2N,HT2FT,HT2BackT,HT2BreastT,HT2FlyT,HT3N,HT3FT,HT3BackT,HT3BreastT,HT3FlyT,HT4N,HT4FT,HT4BackT,HT4BreastT,HT4FlyT,HT5N,HT5FT,HT5BackT,HT5BreastT,HT5FlyT,OT1N,OT1FT,OT1BackT,OT1BreastT,OT1FlyT,OT2N,OT2FT,OT2BackT,OT2BreastT,OT2FlyT,OT3N,OT3FT,OT3BackT,OT3BreastT,OT3FlyT):
+          HTSwimmer1 = ["P", HT1N,HT1FT,HT1BackT,HT1BreastT,HT1FlyT, 0]
+          HTSwimmer2 = ["P", HT2N,HT2FT,HT2BackT,HT2BreastT,HT2FlyT, 1]
+          HTSwimmer3 = ["P", HT3N,HT3FT,HT3BackT,HT3BreastT,HT3FlyT, 2]
+          HTSwimmer4 = ["P", HT4N,HT4FT,HT4BackT,HT4BreastT,HT4FlyT, 3]
+          HTSwimmer5 = ["P", HT5N,HT5FT,HT5BackT,HT5BreastT,HT5FlyT, 4]
+          HTSwimmers = [HTSwimmer1, HTSwimmer2, HTSwimmer3, HTSwimmer4, HTSwimmer5]
+
+          OTSwimmer1 = ["O", OT1N,OT1FT,OT1BackT,OT1BreastT,OT1FlyT, 0]
+          OTSwimmer2 = ["O", OT2N,OT2FT,OT2BackT,OT2BreastT,OT2FlyT, 0]
+          OTSwimmer3 = ["O", OT3N,OT3FT,OT3BackT,OT3BreastT,OT3FlyT, 0]
+
+          OTSwimmers = [OTSwimmer1, OTSwimmer2, OTSwimmer3]
+
+          finalLineUp = []
+          combination = 0
+          pvScore = 0
+          tempScore = 0
+          listScore = []
+          tempLineUp = []
+          fastestTime = 0
+          tiePreventer(HTSwimmers)
+          for subsetFree in itertools.combinations(HTSwimmers, 3):
+              for swimmer in range(0, 3):
+                   tempLineUp.append(subsetFree[swimmer])
+              for subsetBack in itertools.combinations(HTSwimmers, 3):
+                  for swimmer in range(0, 3):
+                      tempLineUp.append(subsetBack[swimmer])
+                  for subsetBreast in itertools.combinations(HTSwimmers, 3):
+                      for swimmer in range(0, 3):
+                           tempLineUp.append(subsetBreast[swimmer])
+                      for subsetFly in itertools.combinations(HTSwimmers, 3):
+                          for swimmer in range(0, 3):
+                              tempLineUp.append(subsetFly[swimmer])
+
+                          if peopleCheck(tempLineUp) == True:
+                              tempScore = 0
+                              tempScore = Score(tempLineUp, tempScore,OTSwimmers)
+                              if pvScore == tempScore:
+                                  combination += 1
+                                  if fastestTime > fastest(tempLineUp):
+                                      fastestTime = fastest(tempLineUp)
+                                      finalLineUp.clear()
+                                      for name in range(0, 12):
+                                          finalLineUp.append(tempLineUp[name][1])
+
+                              elif pvScore < tempScore:
+                                  pvScore = tempScore
+                                  finalLineUp.clear()
+                                  combination = 1
+                                  fastestTime = fastest(tempLineUp)
+                                  for name in range(0, 12):
+                                      finalLineUp.append(tempLineUp[name][1])
+
+                          reset(tempLineUp)
+                      reset(tempLineUp)
+                  reset(tempLineUp)
+              reset(tempLineUp)
+          listScore.sort(reverse=True)
+
+          Results = pvScore, "|Freestyle:", finalLineUp[0], finalLineUp[1], finalLineUp[2], "|Backstroke:", finalLineUp[3],finalLineUp[4],finalLineUp[5], "|Breaststroke:", finalLineUp[6], finalLineUp[7], finalLineUp[8], "|Fly:", finalLineUp[9],finalLineUp[10], finalLineUp[11]
+          print(Results)
+          return str(Results)
+      #lineupGen(r"C:\Users\dangd\Downloads\SwimSeeder_1.xls")
+
+      def sub(*args,**kwargs):
+          result_place = Element('output')
+          result_place.write(f"Result: {lineupGen(Element('HS1name').value,float(Element('HS1ft').value),float(Element('HS1backt').value),float(Element('HS1breastt').value),float(Element('HS1flyt').value),Element('HS2name').value,float(Element('HS2ft').value),float(Element('HS2backt').value),float(Element('HS2breastt').value),float(Element('HS2flyt').value),Element('HS3name').value,float(Element('HS3ft').value),float(Element('HS3backt').value),float(Element('HS3breastt').value),float(Element('HS3flyt').value),Element('HS4name').value,float(Element('HS4ft').value),float(Element('HS4backt').value),float(Element('HS4breastt').value),float(Element('HS4flyt').value),Element('HS5name').value,float(Element('HS5ft').value),float(Element('HS5backt').value),float(Element('HS5breastt').value),float(Element('HS5flyt').value),Element('AS1name').value,float(Element('AS1ft').value),float(Element('AS1backt').value),float(Element('AS1breastt').value),float(Element('AS1flyt').value),Element('AS2name').value,float(Element('AS2ft').value),float(Element('AS2backt').value),float(Element('AS2breastt').value),float(Element('AS2flyt').value),Element('AS3name').value,float(Element('AS3ft').value),float(Element('AS3backt').value),float(Element('AS3breastt').value),float(Element('AS3flyt').value))} ")
+
+</py-script>
+
+
+
+
+</body>
+</html>
